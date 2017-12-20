@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+ <cache
+	name="ehcache.modal.StateDO"
+	
+	eternal="false"
+	timeToIdleSeconds="3000"
+	timeToLiveSeconds="6000"/>
+    
+ 
+ <cache
+	name="ehcache.modal.DistrictDO"
+	
+	eternal="false"
+	timeToIdleSeconds="3000"
+	timeToLiveSeconds="6000"/>
+<!--     <persistence strategy="localTempSwap"/> -->
+    
+    <diskStore path="java.io.tmpdir" />
+    <cache name="org.hibernate.cache.internal.StandardQueryCache"
+        maxElementsInMemory="2000" eternal="false" timeToLiveSeconds="1200"
+        overflowToDisk="true" />
+ 
+    <cache name="org.hibernate.cache.spi.UpdateTimestampsCache"
+        maxElementsInMemory="50000" eternal="true" overflowToDisk="true" />
+ 
+    <defaultCache maxElementsInMemory="10000" eternal="false"
+        timeToIdleSeconds="100000" timeToLiveSeconds="600000" overflowToDisk="false" />
+    
+ 
+</ehcache>
